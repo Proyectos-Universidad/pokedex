@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.cenfotec.pokedex.models.Pokemon;
 
 import java.util.ArrayList;
@@ -36,7 +37,12 @@ public class ListPokemonAdapter extends RecyclerView.Adapter<ListPokemonAdapter.
         Pokemon p = dataset.get(position);
         holder.nameTextView.setText(p.getName());
 
-        Glide.
+        Glide.with(context)
+                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + p.getNumber() + ".png")
+                .centerCrop()
+                .crossFade()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(holder.pictureImageView);
     }
 
     @Override
@@ -53,11 +59,11 @@ public class ListPokemonAdapter extends RecyclerView.Adapter<ListPokemonAdapter.
         private ImageView pictureImageView;
         private TextView nameTextView;
 
-        public ViewHolder (View itemView){
+        private ViewHolder (View itemView){
             super(itemView);
 
-            pictureImageView = (ImageView) itemView.findViewById(R.id.pictureImageView);
-            nameTextView = (TextView) itemView.findViewById(R.id.nameTextView);
+            pictureImageView = itemView.findViewById(R.id.pictureImageView);
+            nameTextView = itemView.findViewById(R.id.nameTextView);
         }
     }
 
