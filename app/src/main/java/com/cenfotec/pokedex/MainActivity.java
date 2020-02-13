@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.cenfotec.pokedex.models.Pokemon;
 import com.cenfotec.pokedex.models.PokemonResponse;
 import com.cenfotec.pokedex.service.PokeService;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
 
 import java.util.ArrayList;
 
@@ -24,6 +27,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    private GoogleSignInClient googleSignInClient;
+    private SignInButton googleSignInButton;
 
     private Retrofit retrofit;
 
@@ -38,7 +43,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        googleSignInButton = findViewById(R.id.sign_in_button);
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+
+        recyclerView = findViewById(R.id.recyclerView);
         listPokemonAdapter = new ListPokemonAdapter(this);
         recyclerView.setAdapter(listPokemonAdapter);
         recyclerView.setHasFixedSize(true);
