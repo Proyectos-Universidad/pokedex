@@ -1,7 +1,9 @@
 package com.cenfotec.pokedex;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.cenfotec.pokedex.models.Pokemon;
 import com.cenfotec.pokedex.models.PokemonResponse;
 import com.cenfotec.pokedex.service.PokeService;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
@@ -27,8 +30,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private GoogleSignInClient googleSignInClient;
-    private SignInButton googleSignInButton;
+    private static GoogleSignInClient googleSignInClient;
+    private static SignInButton googleSignInButton;
 
     private Retrofit retrofit;
 
@@ -48,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
                 .requestEmail()
                 .build();
 
+        googleSignInClient = GoogleSignIn.getClient(this, gso);
+        googleSignInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signInIntent = googleSignInClient.getSignInIntent();
+                startActivityForResult(signInIntent, 101);
+            }
+        });
 
         recyclerView = findViewById(R.id.recyclerView);
         listPokemonAdapter = new ListPokemonAdapter(this);
@@ -84,7 +95,10 @@ public class MainActivity extends AppCompatActivity {
         clearedToLoad = true;
         offset = 0;
         getData(offset);
+
+
     }
+
 
     private void getData(int offset){
 
