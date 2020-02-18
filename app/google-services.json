@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "190563438241",
-    "firebase_url": "https://pokedex-805f2.firebaseio.com",
-    "project_id": "pokedex-805f2",
-    "storage_bucket": "pokedex-805f2.appspot.com"
+    "project_number": "422221211458",
+    "firebase_url": "https://pokedex-65c7e.firebaseio.com",
+    "project_id": "pokedex-65c7e",
+    "storage_bucket": "pokedex-65c7e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:190563438241:android:23fa787d552366be5faae0",
+        "mobilesdk_app_id": "1:422221211458:android:e5217b7431c208d60a4adb",
         "android_client_info": {
           "package_name": "com.cenfotec.pokedex"
         }
       },
       "oauth_client": [
         {
-          "client_id": "190563438241-1oam8fm07fl9sgfnpgbfrsi9cq1dssgh.apps.googleusercontent.com",
+          "client_id": "422221211458-8u08q4u9ni7rt9go12hh32rmcq5b36sf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cenfotec.pokedex",
+            "certificate_hash": "406632621ce80b02608171a528ccb5822425fcea"
+          }
+        },
+        {
+          "client_id": "422221211458-flddgkcqcjggpfvl6opfmpodtf25rh6f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDVBsk328lLpxEmr-frIlwFcSvM53A2Tos"
+          "current_key": "AIzaSyAlJB0MAScpG74sTBe5K5Gc0OxzadkQcH0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "190563438241-1oam8fm07fl9sgfnpgbfrsi9cq1dssgh.apps.googleusercontent.com",
+              "client_id": "422221211458-flddgkcqcjggpfvl6opfmpodtf25rh6f.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
