@@ -49,7 +49,7 @@ public class MainActivity extends BaseActivity implements
         // Button listeners
         findViewById(R.id.signInButton).setOnClickListener(this);
         findViewById(R.id.signOutButton).setOnClickListener(this);
-        findViewById(R.id.teamActionButton).setOnClickListener((View v)-> {
+        findViewById(R.id.pokemonsActionButton).setOnClickListener((View v)-> {
             Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
             startActivity(i);
         });
@@ -180,6 +180,8 @@ public class MainActivity extends BaseActivity implements
             findViewById(R.id.signOutButton).setVisibility(View.VISIBLE);
             findViewById(R.id.teamActionButton).setVisibility(View.VISIBLE);
             findViewById(R.id.textViewCreateTeam).setVisibility(View.VISIBLE);
+            findViewById(R.id.textViewPokemon).setVisibility(View.VISIBLE);
+            findViewById(R.id.pokemonsActionButton).setVisibility(View.VISIBLE);
         } else {
             mStatusTextView.setText("Please log in");
             mDetailTextView.setText(null);
@@ -188,6 +190,8 @@ public class MainActivity extends BaseActivity implements
             findViewById(R.id.signOutButton).setVisibility(View.GONE);
             findViewById(R.id.teamActionButton).setVisibility(View.GONE);
             findViewById(R.id.textViewCreateTeam).setVisibility(View.GONE);
+            findViewById(R.id.textViewPokemon).setVisibility(View.GONE);
+            findViewById(R.id.pokemonsActionButton).setVisibility(View.GONE);
         }
     }
 
