@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "190563438241",
+    "firebase_url": "https://pokedex-805f2.firebaseio.com",
+    "project_id": "pokedex-805f2",
+    "storage_bucket": "pokedex-805f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190563438241:android:23fa787d552366be5faae0",
+        "android_client_info": {
+          "package_name": "com.cenfotec.pokedex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190563438241-1oam8fm07fl9sgfnpgbfrsi9cq1dssgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVBsk328lLpxEmr-frIlwFcSvM53A2Tos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190563438241-1oam8fm07fl9sgfnpgbfrsi9cq1dssgh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
