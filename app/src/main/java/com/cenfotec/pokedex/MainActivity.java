@@ -22,9 +22,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-/**
- * Demonstrate Firebase Authentication using a Google ID Token.
- */
 public class MainActivity extends BaseActivity implements
         View.OnClickListener {
 
@@ -52,7 +49,10 @@ public class MainActivity extends BaseActivity implements
         // Button listeners
         findViewById(R.id.signInButton).setOnClickListener(this);
         findViewById(R.id.signOutButton).setOnClickListener(this);
-        findViewById(R.id.teamActionButton).setOnClickListener(this);
+        findViewById(R.id.teamActionButton).setOnClickListener((View v)-> {
+            Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+            startActivity(i);
+        });
 
         // [START config_signin]
         // Configure Google Sign In
