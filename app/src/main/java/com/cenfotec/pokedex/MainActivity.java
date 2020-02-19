@@ -50,12 +50,12 @@ public class MainActivity extends BaseActivity implements
         findViewById(R.id.signInButton).setOnClickListener(this);
         findViewById(R.id.signOutButton).setOnClickListener(this);
         findViewById(R.id.pokemonsActionButton).setOnClickListener((View v)-> {
-            Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+            Intent i = new Intent(this, ProfileActivity.class);
             startActivity(i);
         });
 
         findViewById(R.id.teamActionButton).setOnClickListener((View v)-> {
-            Intent i = new Intent(getApplicationContext(), TeamActivity.class);
+            Intent i = new Intent(this, TeamActivity.class);
             startActivity(i);
         });
         // [START config_signin]
