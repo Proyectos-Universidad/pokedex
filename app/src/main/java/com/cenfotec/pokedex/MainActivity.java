@@ -54,6 +54,10 @@ public class MainActivity extends BaseActivity implements
             startActivity(i);
         });
 
+        findViewById(R.id.teamActionButton).setOnClickListener((View v)-> {
+            Intent i = new Intent(getApplicationContext(), TeamActivity.class);
+            startActivity(i);
+        });
         // [START config_signin]
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
