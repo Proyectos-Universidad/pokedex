@@ -1,24 +1,15 @@
 package com.cenfotec.pokedex;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cenfotec.pokedex.models.Team;
-import com.cenfotec.pokedex.models.User;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
 
 public class TeamActivity extends AppCompatActivity {
 
@@ -31,8 +22,6 @@ public class TeamActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teams);
 
-        test = findViewById(R.id.buttonTest);
-
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         if( acct != null){
             userEmail = acct.getEmail();
@@ -43,28 +32,28 @@ public class TeamActivity extends AppCompatActivity {
 
         teamsRef = rootRef.child("teams");
 
-        test.setOnClickListener((View v)-> {
-            User newUser = new User("newUser@account.com", "Steph092");
-            ArrayList<User> teamMembers = new ArrayList<>();
-            teamMembers.add(newUser);
-            Team testTeam = new Team("Saturn", teamMembers);
-            teamsRef.child(testTeam.getName()).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                    //Team members = dataSnapshot.child();
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                }
-            });
-
-            teamsRef.child(testTeam.getName()).setValue(testTeam);
-            //teamsRef.push().child("name").setValue("Test team");
-            //teamsRef.push().child("email").setValue(userEmail);
-        });
+//        test.setOnClickListener((View v)-> {
+//            User newUser = new User("newUser@account.com", "Steph092");
+//            ArrayList<User> teamMembers = new ArrayList<>();
+//            teamMembers.add(newUser);
+//            Team testTeam = new Team("Saturn", teamMembers);
+//            teamsRef.child(testTeam.getName()).addListenerForSingleValueEvent(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//
+//                    //Team members = dataSnapshot.child();
+//                }
+//
+//                @Override
+//                public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                }
+//            });
+//
+//            teamsRef.child(testTeam.getName()).setValue(testTeam);
+//            //teamsRef.push().child("name").setValue("Test team");
+//            //teamsRef.push().child("email").setValue(userEmail);
+//        });
     }
 
 
