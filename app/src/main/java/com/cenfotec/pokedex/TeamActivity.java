@@ -52,7 +52,7 @@ public class TeamActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                    Team members = dataSnapshot.getValue();
+                    //Team members = dataSnapshot.child();
                 }
 
                 @Override
