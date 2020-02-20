@@ -42,14 +42,14 @@
                 android:layout_height="wrap_content"
                 android:padding="2dp"
                 android:text="@string/pokemon_name"
-                android:textAppearance="?attr/textAppearanceHeadline6" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="2dp"
                 android:text="@string/pokemon_description"
-                android:textAppearance="?attr/textAppearanceBody2" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
