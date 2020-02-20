@@ -3,6 +3,7 @@
 
     <color name="backgroundColor">#FF771414</color>>
     <color name="toolbarIconColor">#FFFFFF</color>
+    <color name="loginPageBackgroundColor">#FFFFFF</color>
 
     <color name="colorPrimary">#039BE5</color>
     <color name="colorPrimaryDark">#0288D1</color>

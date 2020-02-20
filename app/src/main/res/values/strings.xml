@@ -6,6 +6,8 @@
 
     <string name="label_emailpassword">Email/Password Authentication</string>
     <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+    <string name="poke_search_title">Search</string>
+    <string name="poke_filter_title">Filter</string>
 
     <string name="hint_user_id">User ID</string>
     <string name="get_custom_token">Get Token</string>
