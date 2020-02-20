@@ -6,7 +6,7 @@
     <color name="loginPageBackgroundColor">#FFFFFF</color>
 
     <color name="colorPrimary">#039BE5</color>
-    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimaryDark">#DADCE0</color>
     <color name="colorAccent">#FFA000</color>
 
     <color name="grey_100">#F5F5F5</color>
