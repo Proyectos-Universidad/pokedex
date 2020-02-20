@@ -9,4 +9,6 @@
     <dimen name="field_width_standard">160dp</dimen>
 
     <dimen name="button_horizontal_margin">8dp</dimen>
+
+    <dimen name="card_image_height">108dp</dimen>
 </resources>
